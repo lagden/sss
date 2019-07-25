@@ -14,7 +14,7 @@
 
 -----
 
-Convert `css` to `sss`
+Convert `css` to `sss` or vice versa
 
 ## Install
 
@@ -25,12 +25,24 @@ $ npm i -g @tadashi/sss
 
 ## Usage
 
+CSS to SSS:
+
 ```
 $ sss my/style.css
 ==> Created my/style.sss
 
 $ sss my/style.css -o main.sss
 ==> Created main.sss
+```
+
+SSS to CSS:
+
+```
+$ sss my/style.sss
+==> Created my/style.css
+
+$ sss my/style.sss -o main.css
+==> Created main.css
 ```
 
 

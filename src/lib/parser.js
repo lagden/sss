@@ -11,13 +11,23 @@ function _files(file, ext = '') {
 	return `${resolve(cwd, dirname(file), basename(file, extname(file)))}${ext}`
 }
 
+function _opts(file) {
+	const v = extname(file) === '.css' ? 1 : 0
+	return {
+		pos: v,
+		opts: v ? {stringifier: sugarss} : {parser: sugarss}
+	}
+}
+
 async function parser(_in, _out) {
-	const from = _files(_in, '.css')
-	const to = _files(_out, '.sss')
+	const {pos, opts} = _opts(_in)
+	const exts = ['.sss', '.css']
+	const from = _files(_in, exts[pos])
+	const to = _files(_out, exts[pos ^ 1])
 	const css = fs.readFileSync(from)
 	const ws = fs.createWriteStream(to, {mode: 0o644})
 	const result = await postcss().process(css, {
-		stringifier: sugarss,
+		...opts,
 		// map: {
 		// 	inline: true
 		// },
