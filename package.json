@@ -1,7 +1,7 @@
 {
   "name": "@tadashi/sss",
   "version": "1.0.0",
-  "description": "Convert `css` to `sss`",
+  "description": "Convert css to sss",
   "main": "./src/cli.js",
   "bin": {
     "sss": "./src/cli.js"
