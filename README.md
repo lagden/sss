@@ -27,10 +27,10 @@ $ npm i -g @tadashi/sss
 
 ```
 $ sss my/style.css
-// ==> Created my/style.sss
+==> Created my/style.sss
 
 $ sss my/style.css -o main.sss
-// ==> Created main.sss
+==> Created main.sss
 ```
 
 

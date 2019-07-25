@@ -1,3 +1,5 @@
+*.sss
+
 # Logs
 logs
 *.log
