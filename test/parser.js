@@ -1,7 +1,7 @@
 'use strict'
 
-import test from 'ava'
-import parser from '../src/lib/parser'
+const test = require('ava')
+const parser = require('../src/lib/parser')
 
 test('css to sss', async t => {
 	const result = await parser('./test/fixtures/test.css', './test/fixtures/parser.sss')

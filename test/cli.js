@@ -1,8 +1,8 @@
 'use strict'
 
-import {join} from 'path'
-import {spawn} from 'child_process'
-import test from 'ava'
+const {join} = require('path')
+const {spawn} = require('child_process')
+const test = require('ava')
 
 const bin = join(__dirname, '../src/cli.js')
 
